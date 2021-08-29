@@ -1,5 +1,4 @@
 import argparse
-import getpass
 import os
 
 STATS_SERVICE_TEMPLATE = """

@@ -2,7 +2,6 @@ import argparse
 import getpass
 import os
 
-
 JUPYTER_SERVICE_TEMPLATE = """
 [Unit]
 Description=Jupyter Notebook Service

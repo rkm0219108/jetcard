@@ -18,18 +18,16 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
+import os
+import subprocess
 import time
 
 import Adafruit_SSD1306
+from PIL import Image, ImageDraw, ImageFont
 
-from PIL import Image
-from PIL import ImageDraw
-from PIL import ImageFont
+from jetcard import ads1115, ina219
+
 from .utils import ip_address
-from jetcard import ads1115
-from jetcard import ina219
-import os
-import subprocess
 
 adress = os.popen("i2cdetect -y -r 1 0x48 0x48 | egrep '48' | awk '{print $2}'").read()
 if(adress=='48\n'):

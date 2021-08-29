@@ -1,9 +1,10 @@
 import enum
+import threading
+import time
+
+import ipywidgets.widgets as widgets
 import traitlets
 from traitlets.config.configurable import Configurable
-import ipywidgets.widgets as widgets
-import time
-import threading
 
 
 class Heartbeat(Configurable):

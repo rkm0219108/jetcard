@@ -1,7 +1,8 @@
-import subprocess
-import pkg_resources
-import platform
 import os
+import platform
+import subprocess
+
+import pkg_resources
 
 
 def notebooks_dir():

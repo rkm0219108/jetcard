@@ -1,14 +1,17 @@
-import threading
-import Adafruit_SSD1306
-import time
-import PIL.Image
-import PIL.ImageFont
-import PIL.ImageDraw
-from flask import Flask
-from .utils import ip_address, power_mode, power_usage, cpu_usage, gpu_usage, memory_usage, disk_usage
-from jetcard import ads1115
-from jetcard import ina219
 import os
+import threading
+import time
+
+import Adafruit_SSD1306
+import PIL.Image
+import PIL.ImageDraw
+import PIL.ImageFont
+from flask import Flask
+
+from jetcard import ads1115, ina219
+
+from .utils import (cpu_usage, disk_usage, gpu_usage, ip_address, memory_usage, power_mode, power_usage)
+
 
 class DisplayServer(object):
     
@@ -183,4 +186,3 @@ def set_text(text):
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port='8000', debug=False)
-
